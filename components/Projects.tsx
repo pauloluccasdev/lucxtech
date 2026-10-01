@@ -1,127 +1,78 @@
-import { Arrow, ArrowDown } from "./icons";
-
-type StatusKind = "building" | "soon" | "beta" | "live" | "concept";
-
-interface Project {
-  name: string;
-  slug: string;
-  type: string;
-  status: string;
-  statusKind: StatusKind;
-  period: string;
-  description: string;
-}
-
-const PROJECTS: Project[] = [
-  {
-    name: "Projeto 01",
-    slug: "project-01",
-    type: "Automação · Operações",
-    status: "Em desenvolvimento",
-    statusKind: "building",
-    period: "2026",
-    description: "Plataforma que está sendo construída para automatizar processos repetitivos de operação. Em breve compartilharemos detalhes — o sistema entra em validação ainda este trimestre.",
-  },
-  {
-    name: "Projeto 02",
-    slug: "project-02",
-    type: "IA Aplicada · Atendimento",
-    status: "Próximo lançamento",
-    statusKind: "soon",
-    period: "2026",
-    description: "Assistente de IA sob medida para qualificar leads e organizar pedidos. Saímos da etapa de desenho e estamos integrando os primeiros canais de comunicação.",
-  },
-  {
-    name: "Projeto 03",
-    slug: "project-03",
-    type: "SaaS · Produto próprio",
-    status: "Concept",
-    statusKind: "concept",
-    period: "2026",
-    description: "Nossa primeira plataforma própria — em desenho de arquitetura. Será a base para outros projetos da Lucx e ao mesmo tempo um produto independente para o mercado.",
-  },
-];
-
-const STATUS_COLORS: Record<StatusKind, string> = {
-  building: "var(--green)",
-  soon: "#FFC857",
-  beta: "#7CC6FF",
-  live: "var(--green)",
-  concept: "var(--text-muted)",
-};
+import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section id="projetos" className="section dark projects">
+    <section id="projetos" className="section dark projects project-case">
       <div className="shell">
-        <div className="projects-head">
-          <div>
-            <div className="t-eyebrow" style={{ marginBottom: 28, display: "flex", alignItems: "center", gap: 10 }}>
-              <span style={{ width: 8, height: 8, background: "var(--green)", display: "inline-block", borderRadius: 2 }} />
-              Projetos · o que estamos construindo
+        <header className="case-head">
+          <div className="case-kicker">
+            <span className="case-led" />
+            Projeto real · Em desenvolvimento
+          </div>
+          <div className="case-title-row">
+            <div>
+              <div className="case-name">Liora Closet</div>
+              <h2>Organizando a operação de uma loja que está dando o próximo passo.</h2>
             </div>
-            <h2 className="projects-title">
-              Estamos começando — mas o<br />
-              que construímos é <span className="accent">real.</span>
-            </h2>
-            <p className="projects-sub">
-              A Lucx Tech é um estúdio novo. Em vez de exibir cases que não temos, mostramos
-              o que está em desenvolvimento agora — e como funciona cada um por dentro.
+            <div className="case-status">Protótipo aprovado<br /><strong>Em desenvolvimento</strong></div>
+          </div>
+        </header>
+
+        <div className="case-visual">
+          <div className="case-visual-label">Interface validada · Desktop, tablet e mobile</div>
+          <div className="case-desktop">
+            <Image
+              src="/projects/liora-closet-wireframe.png"
+              alt="Protótipo da plataforma Liora Closet nas versões desktop e mobile"
+              fill
+              sizes="(max-width: 720px) 100vw, 90vw"
+              priority
+            />
+          </div>
+
+          <div className="case-mobile-stack" aria-hidden="true">
+            <div className="case-phone phone-one">
+              <Image src="/projects/liora-closet-wireframe.png" alt="" width={1312} height={1199} />
+            </div>
+            <div className="case-phone phone-two">
+              <Image src="/projects/liora-closet-wireframe.png" alt="" width={1312} height={1199} />
+            </div>
+          </div>
+
+          <div className="case-stamp">EM DESENVOLVIMENTO · LUCX TECH</div>
+        </div>
+
+        <div className="case-story">
+          <article>
+            <span>01 · Cenário</span>
+            <h3>Informações em lugares diferentes.</h3>
+            <p>
+              Com a evolução da operação, acompanhar informações em controles separados
+              começou a exigir mais trabalho e atenção da equipe.
             </p>
-          </div>
-
-          <div className="projects-aside">
-            <div className="rotated">Confira os projetos</div>
-            <a href="#projetos-list" className="round-arrow" aria-label="Ir para projetos">
-              <ArrowDown />
-            </a>
-          </div>
+          </article>
+          <article>
+            <span>02 · Processo</span>
+            <h3>Entender antes de desenvolver.</h3>
+            <p>
+              Mapeamos o que precisava estar mais acessível no dia a dia, desenhamos uma
+              forma de reunir essas informações e validamos o protótipo antes da construção.
+            </p>
+          </article>
+          <article>
+            <span>03 · Construção</span>
+            <h3>Uma operação em um só ambiente.</h3>
+            <p>
+              Estamos construindo uma plataforma para centralizar o acompanhamento de
+              pedidos, produtos, clientes, encomendas, entregas e fluxo de caixa.
+            </p>
+          </article>
         </div>
 
-        <div id="projetos-list" className="projects-list">
-          {PROJECTS.map((p, i) => {
-            const color = STATUS_COLORS[p.statusKind];
-            return (
-              <div className="project-row" key={p.slug}>
-                <div className="project-meta">
-                  <div className="project-num">
-                    {String(i + 1).padStart(2, "0")} / {String(PROJECTS.length).padStart(2, "0")}
-                  </div>
-                  <span className="badge-pill">Projeto Lucx</span>
-                </div>
-
-                <div className="project-main">
-                  <div className="project-status-line">
-                    <span className="status-tag" style={{ color, borderColor: "currentColor" }}>
-                      <span className="ledot" style={{ background: color }} />
-                      {p.status}
-                    </span>
-                    <span className="t-mono" style={{ color: "var(--text-dim)" }}>{p.type}</span>
-                    <span className="t-mono" style={{ color: "var(--text-dim)" }}>· {p.period}</span>
-                  </div>
-                  <h3 className="project-name">{p.name}</h3>
-                  <a href="#" className="project-link">
-                    Acompanhar evolução <Arrow />
-                  </a>
-                </div>
-
-                <div className="project-side">
-                  <div className="braces">{"{ }"}</div>
-                  <p className="project-desc">{p.description}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="projects-foot">
-          <div className="t-mono" style={{ color: "var(--text-dim)" }}>
-            <span style={{ color: "var(--green)" }}>↳</span>&nbsp;&nbsp;Próximo a entrar nessa lista?{" "}
-            <a href="#contato" style={{ color: "var(--text)", borderBottom: "1px solid var(--line-strong)", paddingBottom: 2 }}>
-              O seu projeto.
-            </a>
-          </div>
-        </div>
+        <footer className="case-foot">
+          <p><span>Objetivo</span> Reduzir o trabalho operacional e tornar a rotina da loja mais simples de acompanhar.</p>
+          <small>Os dados exibidos na interface são demonstrativos do protótipo.</small>
+        </footer>
       </div>
     </section>
   );
