@@ -1,4 +1,4 @@
-import LucxMark from "./LucxMark";
+import Image from "next/image";
 import { Arrow } from "./icons";
 
 export default function HeroGlow() {
@@ -10,8 +10,13 @@ export default function HeroGlow() {
 
         <nav className="hg-nav">
           <div className="hg-nav-mark">
-            <LucxMark size={22} />
-            <span>Lucx<span style={{ color: "var(--green)" }}>.</span>Tech</span>
+            <Image
+              src="/brand/lucx-tech-logo.png"
+              alt="Lucx Tech"
+              fill
+              sizes="210px"
+              priority
+            />
           </div>
           <div className="hg-nav-links">
             <a href="#processo">Como pensamos</a>

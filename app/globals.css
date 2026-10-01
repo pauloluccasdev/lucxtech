@@ -185,10 +185,12 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .hg-nav-mark {
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--font-display);
-  font-weight: 600; letter-spacing: -0.02em; font-size: 17px;
+  position: relative;
+  width: 210px;
+  height: 42px;
+  overflow: hidden;
 }
+.hg-nav-mark img { object-fit: cover; object-position: center; }
 .hg-nav-links { display: flex; justify-content: center; gap: 32px; }
 .hg-nav-links a { font-size: 13px; color: rgba(255,255,255,0.7); transition: color 0.2s; }
 .hg-nav-links a:hover { color: #fff; }
@@ -775,8 +777,8 @@ button { font-family: inherit; cursor: pointer; }
 /* Reduced footer, containing only real destinations. */
 .footer-new { padding: 42px 0 34px; border-top: 1px solid var(--line); }
 .footer-new-main { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding-bottom: 38px; }
-.footer-new-brand { display: inline-flex; align-items: center; gap: 11px; font-family: var(--font-display); font-size: 17px; font-weight: 600; }
-.footer-dot { color: var(--green); }
+.footer-new-brand { position: relative; display: block; width: 210px; height: 42px; overflow: hidden; }
+.footer-new-brand img { object-fit: cover; object-position: center; }
 .footer-new-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 26px; }
 .footer-new-nav a { color: var(--text-muted); font-size: 13px; }
 .footer-new-nav a:hover { color: var(--text); }
@@ -822,6 +824,7 @@ button { font-family: inherit; cursor: pointer; }
   .flow { grid-template-columns: 1fr; }
   .flow-arrow { display: none; }
   .hg-nav { padding-left: 24px; padding-right: 24px; }
+  .hg-nav-mark { width: 150px; height: 34px; }
   .hg-headline br { display: none; }
   .problem { padding: 96px 0 80px; }
   .problem-heading { margin-bottom: 48px; }

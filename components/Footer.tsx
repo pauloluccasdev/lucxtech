@@ -1,4 +1,4 @@
-import LucxMark from "./LucxMark";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,8 +6,12 @@ export default function Footer() {
       <div className="shell">
         <div className="footer-new-main">
           <a href="#" className="footer-new-brand" aria-label="Lucx Tech — início">
-            <LucxMark size={30} />
-            <span>Lucx<span className="footer-dot">.</span>Tech</span>
+            <Image
+              src="/brand/lucx-tech-logo.png"
+              alt="Lucx Tech"
+              fill
+              sizes="210px"
+            />
           </a>
           <nav className="footer-new-nav" aria-label="Navegação do rodapé">
             <a href="#processo">Como pensamos</a>
