@@ -1,10 +1,10 @@
 import HeroGlow from "@/components/HeroGlow";
-import Clients from "@/components/Clients";
-import About from "@/components/About";
+import Problem from "@/components/Problem";
+import Reflection from "@/components/Reflection";
+import Process from "@/components/Process";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
-import Differentials from "@/components/Differentials";
-import Band from "@/components/Band";
+import About from "@/components/About";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       <HeroGlow />
-      <Clients />
-      <About />
+      <Problem />
+      <Reflection />
+      <Process />
       <Services />
       <Projects />
-      <Differentials />
-      <Band />
+      <About />
       <FinalCTA />
       <Footer />
     </>
