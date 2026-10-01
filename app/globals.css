@@ -131,6 +131,9 @@ button { font-family: inherit; cursor: pointer; }
   animation: hg-twinkle 4s ease-in-out infinite;
 }
 .hg-card {
+  --glow-x: 50%;
+  --glow-y: 42%;
+  --glow-opacity: .42;
   position: relative;
   z-index: 2;
   flex: 1;
@@ -148,6 +151,22 @@ button { font-family: inherit; cursor: pointer; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+.hg-mouse-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: var(--glow-opacity);
+  background:
+    radial-gradient(
+      520px circle at var(--glow-x) var(--glow-y),
+      rgba(62, 207, 142, .13) 0%,
+      rgba(43, 168, 119, .065) 34%,
+      transparent 72%
+    );
+  transition: opacity .7s ease;
+  will-change: background, opacity;
 }
 .hg-aurora {
   position: absolute;
@@ -817,6 +836,10 @@ button { font-family: inherit; cursor: pointer; }
   .hg-content { padding: 60px 24px 48px; }
   .hg-bottom { flex-direction: column; gap: 18px; margin-top: 48px; padding: 20px 22px; }
   .hg-divider { display: none; }
+  .hg-mouse-glow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hg-mouse-glow { display: none; }
 }
 @media (max-width: 720px) {
   .shell { padding: 0 24px; }

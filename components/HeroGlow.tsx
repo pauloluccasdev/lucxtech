@@ -1,11 +1,31 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 import { Arrow } from "./icons";
 
 export default function HeroGlow() {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  function moveGlow(event: React.MouseEvent<HTMLDivElement>) {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const bounds = card.getBoundingClientRect();
+    card.style.setProperty("--glow-x", `${event.clientX - bounds.left}px`);
+    card.style.setProperty("--glow-y", `${event.clientY - bounds.top}px`);
+    card.style.setProperty("--glow-opacity", "1");
+  }
+
+  function dimGlow() {
+    cardRef.current?.style.setProperty("--glow-opacity", ".42");
+  }
+
   return (
     <section className="section hero-glow-wrap">
-      <div className="hg-card">
+      <div className="hg-card" ref={cardRef} onMouseMove={moveGlow} onMouseLeave={dimGlow}>
         <div className="hg-aurora" aria-hidden="true" />
+        <div className="hg-mouse-glow" aria-hidden="true" />
         <div className="hg-grain" aria-hidden="true" />
 
         <nav className="hg-nav">
