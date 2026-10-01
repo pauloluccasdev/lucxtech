@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lucx Tech — Estúdio de Engenharia Digital",
-  description: "Construímos sistemas que movem o seu negócio — automação, IA e engenharia sob medida.",
+  title: "Lucx Tech — Tecnologia para simplificar o seu negócio",
+  description: "Entendemos processos manuais, repetitivos ou desconectados e usamos tecnologia para tornar a operação mais simples.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

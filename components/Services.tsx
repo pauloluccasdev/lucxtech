@@ -26,7 +26,7 @@ export default function Services() {
         <div className="services-head">
           <div className="services-rule">
             <div className="red" />
-            <div className="label">Soluções · O que pode fazer sentido</div>
+            <div className="label">04 · Soluções possíveis</div>
           </div>
           <h2 className="services-title">
             A tecnologia entra depois<br />
