@@ -31,12 +31,8 @@ export default function Projects() {
           </div>
 
           <div className="case-mobile-stack" aria-hidden="true">
-            <div className="case-phone phone-one">
-              <Image src="/projects/liora-closet-wireframe.png" alt="" width={1312} height={1199} />
-            </div>
-            <div className="case-phone phone-two">
-              <Image src="/projects/liora-closet-wireframe.png" alt="" width={1312} height={1199} />
-            </div>
+            <div className="case-phone phone-one" />
+            <div className="case-phone phone-two" />
           </div>
 
           <div className="case-stamp">EM DESENVOLVIMENTO · LUCX TECH</div>

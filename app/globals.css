@@ -731,12 +731,11 @@ button { font-family: inherit; cursor: pointer; }
 .case-desktop { position: relative; z-index: 1; width: 86%; aspect-ratio: 1.92; overflow: hidden; border: 8px solid #fff; border-radius: 16px; background: #fff; box-shadow: 0 35px 70px rgba(43,28,21,.2); }
 .case-desktop img { object-fit: cover; object-position: center 100%; }
 .case-mobile-stack { position: absolute; z-index: 3; right: 4%; bottom: 40px; display: flex; align-items: flex-end; gap: 14px; }
-.case-phone { position: relative; width: 175px; aspect-ratio: .48; overflow: hidden; border: 6px solid #fff; border-radius: 24px; background: #fff; box-shadow: 0 28px 50px rgba(43,28,21,.25); }
-.case-phone img { max-width: none; object-fit: none; height: auto !important; }
+.case-phone { position: relative; width: 175px; aspect-ratio: .48; overflow: hidden; border: 6px solid #fff; border-radius: 24px; background-color: #f8f5f1; background-image: url('/projects/liora-closet-wireframe.png'); background-repeat: no-repeat; background-size: 930px auto; box-shadow: 0 28px 50px rgba(43,28,21,.25); }
 .phone-one { transform: rotate(-3deg) translateY(18px); }
 .phone-two { transform: rotate(3deg); }
-.phone-one img { width: 930px !important; left: -5px !important; top: -36px !important; }
-.phone-two img { width: 930px !important; left: -406px !important; top: -36px !important; }
+.phone-one { background-position: -24px -39px; }
+.phone-two { background-position: -204px -39px; }
 .case-stamp { position: absolute; left: 46px; bottom: 25px; z-index: 2; font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; color: rgba(28,19,15,.65); }
 .case-story { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .case-story article { padding: 42px 34px 48px; border-right: 1px solid var(--line); }
@@ -845,8 +844,9 @@ button { font-family: inherit; cursor: pointer; }
   .case-desktop { border-width: 4px; border-radius: 8px; }
   .case-mobile-stack { right: 6%; bottom: 44px; gap: 7px; }
   .case-phone { width: 92px; border-width: 3px; border-radius: 14px; }
-  .case-phone img { width: 490px !important; top: -18px !important; }
-  .phone-two img { left: -214px !important; }
+  .case-phone { background-size: 490px auto; }
+  .phone-one { background-position: -13px -20px; }
+  .phone-two { background-position: -108px -20px; }
   .case-stamp { left: 18px; bottom: 18px; font-size: 8px; }
   .case-story article { padding-left: 24px; padding-right: 24px; }
   .case-foot { flex-direction: column; gap: 20px; }
