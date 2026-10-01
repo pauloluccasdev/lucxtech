@@ -725,18 +725,18 @@ button { font-family: inherit; cursor: pointer; }
 .case-title-row h2 { max-width: 960px; margin: 0; font-family: var(--font-display); font-size: clamp(46px, 6vw, 86px); font-weight: 500; line-height: .98; letter-spacing: -.045em; }
 .case-status { padding: 20px 0 2px; border-top: 1px solid var(--line-strong); font-size: 13px; line-height: 1.7; color: var(--text-dim); }
 .case-status strong { color: var(--text); font-weight: 500; }
-.case-visual { position: relative; min-height: 760px; padding: 76px 46px 46px; background: #e9e3dc; color: #1c130f; overflow: hidden; }
+.case-visual { position: relative; padding: 76px 46px 54px; background: #e9e3dc; color: #1c130f; overflow: hidden; }
 .case-visual::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(67,43,31,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(67,43,31,.06) 1px, transparent 1px); background-size: 44px 44px; }
 .case-visual-label { position: absolute; top: 25px; left: 46px; z-index: 2; font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: rgba(28,19,15,.62); }
-.case-desktop { position: relative; z-index: 1; width: 86%; aspect-ratio: 1.92; overflow: hidden; border: 8px solid #fff; border-radius: 16px; background: #fff; box-shadow: 0 35px 70px rgba(43,28,21,.2); }
-.case-desktop img { object-fit: cover; object-position: center 100%; }
+.case-desktop { position: relative; z-index: 1; width: 100%; aspect-ratio: 1672 / 941; overflow: hidden; border: 8px solid #fff; border-radius: 16px; background: #fff; box-shadow: 0 35px 70px rgba(43,28,21,.2); }
+.case-desktop img { object-fit: cover; object-position: center; }
 .case-mobile-stack { position: absolute; z-index: 3; right: 4%; bottom: 40px; display: flex; align-items: flex-end; gap: 14px; }
 .case-phone { position: relative; width: 175px; aspect-ratio: .48; overflow: hidden; border: 6px solid #fff; border-radius: 24px; background-color: #f8f5f1; background-image: url('/projects/liora-closet-wireframe.png'); background-repeat: no-repeat; background-size: 930px auto; box-shadow: 0 28px 50px rgba(43,28,21,.25); }
 .phone-one { transform: rotate(-3deg) translateY(18px); }
 .phone-two { transform: rotate(3deg); }
 .phone-one { background-position: -24px -39px; }
 .phone-two { background-position: -204px -39px; }
-.case-stamp { position: absolute; left: 46px; bottom: 25px; z-index: 2; font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; color: rgba(28,19,15,.65); }
+.case-stamp { position: absolute; left: 46px; bottom: 22px; z-index: 2; font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; color: rgba(28,19,15,.65); }
 .case-story { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .case-story article { padding: 42px 34px 48px; border-right: 1px solid var(--line); }
 .case-story article > span { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--green); }
@@ -799,7 +799,6 @@ button { font-family: inherit; cursor: pointer; }
   .process-step:nth-child(-n+2) { border-bottom: 1px solid var(--light-line); }
   .process-arrow { display: none; }
   .case-title-row { grid-template-columns: 1fr; gap: 40px; }
-  .case-visual { min-height: 620px; }
   .case-desktop { width: 100%; }
   .case-phone { width: 145px; }
   .case-story { grid-template-columns: 1fr; }
@@ -839,7 +838,7 @@ button { font-family: inherit; cursor: pointer; }
   .process-step:last-child { border-bottom: 0; }
   .project-case { padding: 96px 0 80px; }
   .case-head { margin-bottom: 48px; }
-  .case-visual { min-height: 480px; padding: 62px 18px 18px; }
+  .case-visual { padding: 62px 18px 42px; }
   .case-visual-label { left: 18px; }
   .case-desktop { border-width: 4px; border-radius: 8px; }
   .case-mobile-stack { right: 6%; bottom: 44px; gap: 7px; }

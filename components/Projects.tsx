@@ -22,17 +22,12 @@ export default function Projects() {
           <div className="case-visual-label">Interface validada · Desktop, tablet e mobile</div>
           <div className="case-desktop">
             <Image
-              src="/projects/liora-closet-wireframe.png"
-              alt="Protótipo da plataforma Liora Closet nas versões desktop e mobile"
+              src="/projects/liora-closet-showcase.png"
+              alt="Plataforma Liora Closet apresentada em um notebook e dois celulares"
               fill
               sizes="(max-width: 720px) 100vw, 90vw"
               priority
             />
-          </div>
-
-          <div className="case-mobile-stack" aria-hidden="true">
-            <div className="case-phone phone-one" />
-            <div className="case-phone phone-two" />
           </div>
 
           <div className="case-stamp">EM DESENVOLVIMENTO · LUCX TECH</div>

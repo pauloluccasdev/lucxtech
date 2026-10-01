@@ -15,11 +15,11 @@ export default function FinalCTA() {
             — inclusive para descobrir se o problema realmente precisa de tecnologia.
           </p>
           <div className="final-new-action">
-            <a href="mailto:contato@lucx.tech" className="btn btn-primary btn-xl">
+            <a href="https://w.app/fiawrt" className="btn btn-primary btn-xl" target="_blank" rel="noreferrer">
               Vamos conversar <Arrow />
             </a>
-            <a href="mailto:contato@lucx.tech" className="final-email">
-              <Mail /> contato@lucx.tech
+            <a href="mailto:contato.pauloraimundo@gmail.com" className="final-email">
+              <Mail /> contato.pauloraimundo@gmail.com
             </a>
           </div>
         </div>

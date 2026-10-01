@@ -42,7 +42,7 @@ export default function HeroGlow() {
           </p>
 
           <div className="hg-ctas">
-            <a href="#contato" className="btn btn-primary btn-xl">
+            <a href="https://w.app/fiawrt" className="btn btn-primary btn-xl" target="_blank" rel="noreferrer">
               Vamos conversar
               <Arrow />
             </a>
