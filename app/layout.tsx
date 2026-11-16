@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lucxtech.vercel.app"),
+  metadataBase: new URL("https://lucxtech.com"),
   title: "Lucx — Ideias que viram soluções",
   description: "Sistemas, aplicativos, integrações e automações sob medida para simplificar o trabalho e fazer negócios avançarem.",
   openGraph: {

@@ -27,7 +27,7 @@ export default function HeroGlow() {
         <p className="hero__text hero-enter hero-enter--3">Criamos sistemas, aplicativos e automações que simplificam o trabalho e fazem negócios avançarem.</p>
         <div className="hero__actions hero-enter hero-enter--4">
           <ButtonLink href="#projetos">Conheça os projetos</ButtonLink>
-          <ButtonLink href="https://w.app/fiawrt" target="_blank" rel="noreferrer" variant="light">Vamos conversar</ButtonLink>
+          <ButtonLink href="/contato" variant="light">Vamos conversar</ButtonLink>
         </div>
         <a className="hero__scroll hero-enter hero-enter--4" href="#sobre" aria-label="Ir para apresentação"><span>Conheça a Lucx</span><i aria-hidden="true">↓</i></a>
         <span className="hero__index hero-enter hero-enter--4" aria-hidden="true">01 — 05</span>

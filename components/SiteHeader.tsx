@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import ButtonLink from "./ui/ButtonLink";
 
 const LINKS = [
-  { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/#inicio" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Projetos", href: "/#projetos" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Contato", href: "/contato" },
 ];
 
 export default function SiteHeader() {
@@ -63,7 +63,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__bar">
-        <a href="#inicio" className="site-header__brand" aria-label="Lucx — início">
+        <a href="/" className="site-header__brand" aria-label="Lucx — início">
           <Image
             src="/brand/lucx-wordmark-on-light.svg"
             alt="lucx."
@@ -81,9 +81,7 @@ export default function SiteHeader() {
 
         <div className="site-header__actions">
           <ButtonLink
-            href="https://w.app/fiawrt"
-            target="_blank"
-            rel="noreferrer"
+            href="/contato"
             className="site-header__cta"
           >
             Vamos conversar
@@ -122,7 +120,7 @@ export default function SiteHeader() {
           ))}
         </nav>
         <div className="mobile-menu__footer">
-          <ButtonLink href="https://w.app/fiawrt" target="_blank" rel="noreferrer" onClick={closeMenu}>
+          <ButtonLink href="/contato" onClick={closeMenu}>
             Vamos conversar
           </ButtonLink>
           <a href="mailto:contato.pauloraimundo@gmail.com">contato.pauloraimundo@gmail.com</a>

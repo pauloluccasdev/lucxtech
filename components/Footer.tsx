@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer footer-new">
       <Container>
         <div className="footer-new-main">
-          <a href="#inicio" className="footer-new-brand" aria-label="Lucx — início">
+          <a href="/" className="footer-new-brand" aria-label="Lucx — início">
             <Image
               src="/brand/lucx-wordmark-on-dark.svg"
               alt="lucx."
@@ -15,11 +15,11 @@ export default function Footer() {
             />
           </a>
           <nav className="footer-new-nav" aria-label="Navegação do rodapé">
-            <a href="#inicio">Início</a>
-            <a href="#servicos">Soluções</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
+            <a href="/#inicio">Início</a>
+            <a href="/#servicos">Soluções</a>
+            <a href="/#projetos">Projetos</a>
+            <a href="/#sobre">Sobre</a>
+            <a href="/contato">Contato</a>
           </nav>
         </div>
         <div className="footer-new-bottom">
