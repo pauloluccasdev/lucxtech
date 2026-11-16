@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer footer-new">
       <Container>
         <div className="footer-new-main">
-          <a href="#" className="footer-new-brand" aria-label="Lucx Tech — início">
+          <a href="#inicio" className="footer-new-brand" aria-label="Lucx — início">
             <Image
               src="/brand/lucx-wordmark-on-dark.svg"
               alt="lucx."

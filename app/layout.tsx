@@ -6,8 +6,15 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Lucx Tech — Tecnologia para simplificar o seu negócio",
-  description: "Entendemos processos manuais, repetitivos ou desconectados e usamos tecnologia para tornar a operação mais simples.",
+  metadataBase: new URL("https://lucxtech.vercel.app"),
+  title: "Lucx — Ideias que viram soluções",
+  description: "Sistemas, aplicativos, integrações e automações sob medida para simplificar o trabalho e fazer negócios avançarem.",
+  openGraph: {
+    title: "Lucx — Ideias que viram soluções",
+    description: "Desenvolvimento de software sob medida para problemas reais.",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
