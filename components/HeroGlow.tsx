@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
 import { Arrow } from "./icons";
+import SiteHeader from "./SiteHeader";
 
 export default function HeroGlow() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -22,33 +22,13 @@ export default function HeroGlow() {
   }
 
   return (
-    <section className="section hero-glow-wrap">
+    <section className="section hero-glow-wrap" id="inicio">
       <div className="hg-card" ref={cardRef} onMouseMove={moveGlow} onMouseLeave={dimGlow}>
         <div className="hg-aurora" aria-hidden="true" />
         <div className="hg-mouse-glow" aria-hidden="true" />
         <div className="hg-grain" aria-hidden="true" />
 
-        <nav className="hg-nav">
-          <div className="hg-nav-mark">
-            <Image
-              src="/brand/lucx-tech-logo.png"
-              alt="Lucx Tech"
-              fill
-              sizes="210px"
-              priority
-            />
-          </div>
-          <div className="hg-nav-links">
-            <a href="#processo">Como pensamos</a>
-            <a href="#servicos">Soluções</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-          </div>
-          <a href="#contato" className="btn btn-primary hg-cta-top">
-            Fale com a gente
-          </a>
-        </nav>
+        <SiteHeader />
 
         <div className="hg-content">
           <div className="hg-eyebrow">
