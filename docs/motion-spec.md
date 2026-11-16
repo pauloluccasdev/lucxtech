@@ -17,7 +17,10 @@ O movimento reforça hierarquia e resposta à interação. Ele não compete com 
 | Fundo do menu mobile | clique | opacidade 0 | opacidade 1 | 350 ms | sim |
 | FAQ | clique | resposta oculta | cartão reduz área da pergunta e exibe resposta | 400 ms | sim |
 | Trilho de FAQ | setas / gesto | posição atual | próximo grupo de cartões | rolagem suave nativa | sim |
-| Órbitas da apresentação | contínuo | 0° | 360° | 13 s e 18 s, linear | contínuo |
+| Plano tipográfico do hero | ponteiro preciso | posição central | deslocamento de até 10 px conforme posição | 800 ms | sim; inativo em touch |
+| Órbitas institucionais | painel na viewport | animação pausada | rotação lenta em 20 s e 28 s | contínuo enquanto visível | pausa fora da viewport |
+| Cards de serviço | hover em ponteiro preciso | posição original | elevação de 6 px e movimentos internos coordenados | 450–550 ms | sim; inativo em touch |
+| Mídia de projetos | hover em ponteiro preciso | posição original | elevação de 5 px e escala de até 1,035 | 550–700 ms | sim; inativo em touch |
 
 ## Acessibilidade e dispositivos
 
@@ -33,4 +36,4 @@ O movimento reforça hierarquia e resposta à interação. Ele não compete com 
 - Não há listener global de scroll.
 - Cada revelação desconecta o observador assim que entra no viewport.
 - Imagens e elementos visuais usam escala sem alterar layout.
-- As animações contínuas são limitadas a dois círculos simples e são removidas quando há preferência por movimento reduzido.
+- As animações contínuas são limitadas a dois círculos simples, pausam fora da viewport e são removidas quando há preferência por movimento reduzido.
