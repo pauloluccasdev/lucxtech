@@ -45,17 +45,25 @@ export default function ContactForm() {
           <input name="email" type="email" autoComplete="email" placeholder="voce@empresa.com" maxLength={160} required />
         </label>
         <label>
-          <span>Telefone <small>(opcional)</small></span>
-          <input name="phone" type="tel" autoComplete="tel" placeholder="(00) 00000-0000" maxLength={30} />
+          <span>WhatsApp</span>
+          <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(00) 00000-0000" minLength={10} maxLength={30} required />
         </label>
         <label>
-          <span>Empresa <small>(opcional)</small></span>
-          <input name="company" type="text" autoComplete="organization" placeholder="Nome da empresa" maxLength={120} />
+          <span>Serviço de interesse</span>
+          <select name="service" defaultValue="" required>
+            <option value="" disabled>Selecione uma opção</option>
+            <option value="Sistema sob medida">Sistema sob medida</option>
+            <option value="Aplicativo">Aplicativo</option>
+            <option value="Integração entre sistemas">Integração entre sistemas</option>
+            <option value="Automação de processos">Automação de processos</option>
+            <option value="Ainda não sei">Ainda não sei — quero conversar</option>
+            <option value="Outro">Outro</option>
+          </select>
         </label>
       </div>
       <label className="contact-form__message">
-        <span>Conte um pouco sobre o que precisa funcionar melhor</span>
-        <textarea name="message" placeholder="Pode explicar o cenário atual, o problema e o que você espera simplificar." minLength={20} maxLength={3000} required />
+        <span>Conte mais detalhes</span>
+        <textarea name="message" placeholder="Explique o que você precisa, como funciona hoje e o que gostaria de melhorar." minLength={20} maxLength={3000} required />
       </label>
       <label className="contact-form__trap" aria-hidden="true">
         Não preencha este campo

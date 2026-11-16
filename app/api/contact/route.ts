@@ -24,14 +24,14 @@ export async function POST(request: Request) {
     const body = (await request.json()) as Record<string, unknown>;
     const name = clean(body.name, 100);
     const email = clean(body.email, 160).toLowerCase();
-    const phone = clean(body.phone, 30);
-    const company = clean(body.company, 120);
+    const whatsapp = clean(body.whatsapp, 30);
+    const service = clean(body.service, 120);
     const message = clean(body.message, 3000);
     const website = clean(body.website, 200);
 
     if (website) return NextResponse.json({ message: "Mensagem recebida." });
-    if (name.length < 2 || !EMAIL_PATTERN.test(email) || message.length < 20) {
-      return NextResponse.json({ message: "Revise o nome, o e-mail e a descrição antes de enviar." }, { status: 400 });
+    if (name.length < 2 || !EMAIL_PATTERN.test(email) || whatsapp.length < 10 || !service || message.length < 20) {
+      return NextResponse.json({ message: "Revise o nome, o e-mail, o WhatsApp, o serviço e os detalhes antes de enviar." }, { status: 400 });
     }
 
     const smtpUser = process.env.SMTP_USER;
@@ -51,8 +51,8 @@ export async function POST(request: Request) {
     const safe = {
       name: escapeHtml(name),
       email: escapeHtml(email),
-      phone: escapeHtml(phone || "Não informado"),
-      company: escapeHtml(company || "Não informada"),
+      whatsapp: escapeHtml(whatsapp),
+      service: escapeHtml(service),
       message: escapeHtml(message).replace(/\n/g, "<br />"),
     };
 
@@ -60,9 +60,9 @@ export async function POST(request: Request) {
       from: `Site Lucx <${smtpUser}>`,
       to: process.env.CONTACT_TO_EMAIL || "contato.pauloraimundo@gmail.com",
       replyTo: `${name} <${email}>`,
-      subject: `Novo contato pelo site — ${name}`,
-      text: `Nome: ${name}\nE-mail: ${email}\nTelefone: ${phone || "Não informado"}\nEmpresa: ${company || "Não informada"}\n\nMensagem:\n${message}`,
-      html: `<div style="font-family:Arial,sans-serif;max-width:640px;color:#171717"><p style="color:#047857;font-size:12px;text-transform:uppercase;letter-spacing:.12em">Novo contato · lucxtech.com</p><h1 style="font-size:28px">${safe.name}</h1><p><strong>E-mail:</strong> ${safe.email}<br><strong>Telefone:</strong> ${safe.phone}<br><strong>Empresa:</strong> ${safe.company}</p><hr style="border:0;border-top:1px solid #ddd"><p style="line-height:1.6">${safe.message}</p></div>`,
+      subject: `Novo lead — ${service} — ${name}`,
+      text: `Nome: ${name}\nE-mail: ${email}\nWhatsApp: ${whatsapp}\nServiço de interesse: ${service}\n\nDetalhes:\n${message}`,
+      html: `<div style="font-family:Arial,sans-serif;max-width:640px;color:#171717"><p style="color:#047857;font-size:12px;text-transform:uppercase;letter-spacing:.12em">Novo lead · lucxtech.com</p><h1 style="font-size:28px">${safe.name}</h1><p><strong>E-mail:</strong> ${safe.email}<br><strong>WhatsApp:</strong> ${safe.whatsapp}<br><strong>Serviço de interesse:</strong> ${safe.service}</p><hr style="border:0;border-top:1px solid #ddd"><h2 style="font-size:16px">O que a pessoa precisa</h2><p style="line-height:1.6">${safe.message}</p></div>`,
     });
 
     return NextResponse.json({ message: "Mensagem enviada com sucesso." });

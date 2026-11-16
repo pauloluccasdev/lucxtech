@@ -25,7 +25,7 @@ export default function ContactPage() {
             <span>01</span>
             <div>
               <h2 id="contact-form-title">Envie uma mensagem</h2>
-              <p>Preencha o essencial. A conversa continua com uma pessoa, não com um fluxo automático.</p>
+              <p>Deixe seus dados e conte o que você precisa. Entraremos em contato para entender melhor o cenário.</p>
             </div>
           </div>
           <ContactForm />
