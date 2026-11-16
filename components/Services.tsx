@@ -11,7 +11,20 @@ const services = [
 function ServiceVisual({ type }: { type: string }) {
   if (type === "system") return <div className="service-mock service-mock--system" aria-hidden="true"><aside><i /><i /><i /><i /></aside><main><header /><div className="mock-stats"><i /><i /><i /></div><div className="mock-chart" /></main></div>;
   if (type === "app") return <div className="service-mock service-mock--app" aria-hidden="true"><div className="mock-phone"><span>diazen</span><i /><i /><i /><footer /></div><small>representação visual</small></div>;
-  if (type === "integration") return <div className="service-mock service-mock--integration" aria-hidden="true"><span>CRM</span><span>API</span><span>ERP</span><span>Dados</span><i /><i /><i /></div>;
+  if (type === "integration") return <div className="service-mock service-mock--integration" aria-hidden="true">
+    <svg className="integration-lines" viewBox="0 0 500 300" preserveAspectRatio="none">
+      <defs><marker id="integration-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 8 4 0 8Z" /></marker></defs>
+      <path d="M112 62 C176 62 184 126 210 140" />
+      <path d="M388 62 C324 62 316 126 290 140" />
+      <path d="M112 238 C176 238 184 174 210 160" />
+      <path d="M388 238 C324 238 316 174 290 160" />
+    </svg>
+    <span className="integration-node integration-node--crm">CRM</span>
+    <span className="integration-node integration-node--data">Dados</span>
+    <span className="integration-node integration-node--apps">Apps</span>
+    <span className="integration-node integration-node--erp">ERP</span>
+    <span className="integration-hub"><small>hub</small>API</span>
+  </div>;
   return <div className="service-mock service-mock--automation" aria-hidden="true"><div><span>01</span>Entrada<i /></div><div><span>02</span>Regra<i /></div><div><span>03</span>Ação<b>feito</b></div></div>;
 }
 
