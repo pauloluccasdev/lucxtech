@@ -18,6 +18,6 @@ function ServiceVisual({ type }: { type: string }) {
 export default function Services() {
   return <section className="services-v2 section-v2" id="servicos"><Container>
     <Reveal className="section-heading"><div><span className="eyebrow">O que fazemos</span><h2>Da ideia à solução.<br /><span>Construída para funcionar.</span></h2></div><p>Escolhemos a tecnologia depois de entender o que o produto ou processo realmente precisa.</p></Reveal>
-    <div className="services-grid">{services.map((service, index) => <Reveal className={`service-card service-card--${service.visual}`} delay={index * 80} key={service.title}><div className="service-card__visual"><ServiceVisual type={service.visual} /></div><div className="service-card__body"><span>{service.number}</span><h3>{service.title}</h3><p>{service.text}</p></div></Reveal>)}</div>
+    <div className="services-grid">{services.map((service, index) => <Reveal role="article" className={`service-card service-card--${service.visual}`} delay={index * 80} key={service.title}><div className="service-card__visual"><ServiceVisual type={service.visual} /></div><div className="service-card__body"><span>{service.number}</span><h3>{service.title}</h3><p>{service.text}</p></div></Reveal>)}</div>
   </Container></section>;
 }
