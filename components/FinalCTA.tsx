@@ -1,31 +1,7 @@
-import { Arrow, Mail } from "./icons";
+import ButtonLink from "./ui/ButtonLink";
+import Container from "./ui/Container";
+import Reveal from "./ui/Reveal";
 
 export default function FinalCTA() {
-  return (
-    <section id="contato" className="section dark final final-new">
-      <div className="shell">
-        <div className="final-new-top">
-          <div className="section-index">06 · Uma conversa para começar</div>
-          <h2>Tem algum processo no seu negócio que dá mais trabalho do que deveria?</h2>
-        </div>
-
-        <div className="final-new-bottom">
-          <p>
-            Conte como ele funciona hoje. A primeira conversa serve para entender o cenário
-            — inclusive para descobrir se o problema realmente precisa de tecnologia.
-          </p>
-          <div className="final-new-action">
-            <a href="https://w.app/fiawrt" className="btn btn-primary btn-xl" target="_blank" rel="noreferrer">
-              Vamos conversar <Arrow />
-            </a>
-            <a href="mailto:contato.pauloraimundo@gmail.com" className="final-email">
-              <Mail /> contato.pauloraimundo@gmail.com
-            </a>
-          </div>
-        </div>
-
-        <div className="final-new-note">Sem diagnóstico pronto. Primeiro, a gente entende.</div>
-      </div>
-    </section>
-  );
+  return <section className="contact-v2 section-v2" id="contato"><Container><Reveal className="contact-card"><div><span className="eyebrow">Próximo passo</span><h2>Vamos construir algo?</h2><p>Tem uma ideia ou um processo que precisa funcionar melhor? Vamos conversar.</p></div><ButtonLink href="https://w.app/fiawrt" target="_blank" rel="noreferrer">Fale com a Lucx</ButtonLink></Reveal></Container></section>;
 }

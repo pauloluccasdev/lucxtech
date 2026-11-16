@@ -1,70 +1,13 @@
 import Image from "next/image";
+import Container from "./ui/Container";
+import Reveal from "./ui/Reveal";
 
 export default function Projects() {
-  return (
-    <section id="projetos" className="section dark projects project-case">
-      <div className="shell">
-        <header className="case-head">
-          <div className="case-kicker">
-            <span className="case-led" />
-            Projeto real · Em desenvolvimento
-          </div>
-          <div className="case-title-row">
-            <div>
-              <div className="case-name">Liora Closet</div>
-              <h2>Organizando a operação de uma loja que está dando o próximo passo.</h2>
-            </div>
-            <div className="case-status">Protótipo aprovado<br /><strong>Em desenvolvimento</strong></div>
-          </div>
-        </header>
-
-        <div className="case-visual">
-          <div className="case-visual-label">Interface validada · Desktop, tablet e mobile</div>
-          <div className="case-desktop">
-            <Image
-              src="/projects/liora-closet-showcase.png"
-              alt="Plataforma Liora Closet apresentada em um notebook e dois celulares"
-              fill
-              sizes="(max-width: 720px) 100vw, 90vw"
-              priority
-            />
-          </div>
-
-          <div className="case-stamp">EM DESENVOLVIMENTO · LUCX TECH</div>
-        </div>
-
-        <div className="case-story">
-          <article>
-            <span>01 · Cenário</span>
-            <h3>Informações em lugares diferentes.</h3>
-            <p>
-              Com a evolução da operação, acompanhar informações em controles separados
-              começou a exigir mais trabalho e atenção da equipe.
-            </p>
-          </article>
-          <article>
-            <span>02 · Processo</span>
-            <h3>Entender antes de desenvolver.</h3>
-            <p>
-              Mapeamos o que precisava estar mais acessível no dia a dia, desenhamos uma
-              forma de reunir essas informações e validamos o protótipo antes da construção.
-            </p>
-          </article>
-          <article>
-            <span>03 · Construção</span>
-            <h3>Uma operação em um só ambiente.</h3>
-            <p>
-              Estamos construindo uma plataforma para centralizar o acompanhamento de
-              pedidos, produtos, clientes, encomendas, entregas e fluxo de caixa.
-            </p>
-          </article>
-        </div>
-
-        <footer className="case-foot">
-          <p><span>Objetivo</span> Reduzir o trabalho operacional e tornar a rotina da loja mais simples de acompanhar.</p>
-          <small>Os dados exibidos na interface são demonstrativos do protótipo.</small>
-        </footer>
-      </div>
-    </section>
-  );
+  return <section className="projects-v2 section-v2" id="projetos"><Container>
+    <Reveal className="section-heading section-heading--projects"><div><span className="eyebrow">Projetos selecionados</span><h2>Produtos em construção.<br /><span>Trabalho real.</span></h2></div><p>Mostramos o estágio verdadeiro de cada produto, sem transformar projetos em andamento em cases concluídos.</p></Reveal>
+    <div className="projects-grid">
+      <Reveal className="project-card"><div className="project-card__media project-card__media--diazen"><div className="diazen-demo" aria-label="Representação temporária do aplicativo Diazen"><div className="diazen-phone"><header><b>diazen</b><i /></header><p>Seu dia</p><div className="diazen-ring">72%</div><div className="diazen-bars"><i /><i /><i /></div></div><span>Representação visual<br />Capturas em preparação</span></div></div><div className="project-card__meta"><div><span>Aplicativo · Em testes</span><h3>Diazen</h3></div><p>Acompanhamento de alimentação, treinos, hidratação e evolução física.</p></div></Reveal>
+      <Reveal className="project-card" delay={90}><div className="project-card__media project-card__media--liora"><Image src="/projects/liora-closet-showcase.png" alt="Plataforma Liora Closet em notebook e celulares" fill sizes="(max-width: 720px) 100vw, 50vw" /></div><div className="project-card__meta"><div><span>Sistema de gestão · Em refinamento para testes</span><h3>Liora Closet</h3></div><p>Plataforma para organizar produtos, pedidos, clientes e processos de uma loja.</p></div></Reveal>
+    </div>
+  </Container></section>;
 }
