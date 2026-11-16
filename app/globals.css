@@ -264,8 +264,6 @@ img { display: block; max-width: 100%; }
 .contact-page__visual ol { position:relative; z-index:2; display:grid; grid-template-columns:repeat(3,1fr); margin:34px 0 0; padding:0; border-top:1px solid #343735; list-style:none; }
 .contact-page__visual li { padding:16px 8px 0 0; color:#b8bcb9; font-size:11px; text-transform:uppercase; }
 .contact-page__visual li span { display:block; margin-bottom:8px; color:#5ee0b0; font:8px var(--font-mono); }
-.contact-page__visual>a { position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; margin-top:32px; padding-top:20px; border-top:1px solid #343735; color:#aeb2af; font-size:13px; }
-.contact-page__visual>a span { display:grid; width:36px; height:36px; place-items:center; border-radius:50%; background:#fff; color:#090909; }
 
 @media (max-width: 1000px) {
   .site-header__bar{grid-template-columns:1fr auto;padding-left:18px}.site-header__nav,.site-header__cta{display:none}.menu-trigger{display:block}

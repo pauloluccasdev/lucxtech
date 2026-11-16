@@ -48,7 +48,6 @@ export default function ContactPage() {
             <li><span>02</span> Simplificar</li>
             <li><span>03</span> Construir</li>
           </ol>
-          <a href="https://w.app/fiawrt" target="_blank" rel="noreferrer">Prefere WhatsApp? <span>↗</span></a>
         </aside>
       </Container>
       <Footer />
