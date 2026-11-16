@@ -70,7 +70,9 @@ export default function SiteHeader() {
             fill
             sizes="116px"
             priority
+            className="theme-logo theme-logo--light"
           />
+          <Image src="/brand/lucx-wordmark-on-dark.svg" alt="" fill sizes="116px" priority className="theme-logo theme-logo--dark" />
         </a>
 
         <nav className="site-header__nav" aria-label="Navegação principal">
@@ -108,7 +110,8 @@ export default function SiteHeader() {
         inert={!open ? true : undefined}
       >
         <div className="mobile-menu__top">
-          <Image src="/brand/lucx-wordmark-on-light.svg" alt="lucx." width={116} height={64} />
+          <Image src="/brand/lucx-wordmark-on-light.svg" alt="lucx." width={116} height={64} className="theme-logo theme-logo--light" />
+          <Image src="/brand/lucx-wordmark-on-dark.svg" alt="" width={116} height={64} className="theme-logo theme-logo--dark" />
           <button ref={closeRef} type="button" className="menu-close" aria-label="Fechar menu" onClick={closeMenu}>×</button>
         </div>
         <nav className="mobile-menu__nav" aria-label="Navegação mobile">
